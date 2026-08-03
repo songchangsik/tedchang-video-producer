@@ -1,0 +1,6 @@
+{
+  "name": "테드창 Video Producer Portfolio",
+  "description": "기획부터 촬영, 편집, 성과까지 책임지는 영상 PD 테드창의 포트폴리오 웹사이트",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

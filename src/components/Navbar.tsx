@@ -3,19 +3,16 @@ import { Video, ShieldCheck, Lock, Menu, X, LogOut } from 'lucide-react';
 import { usePortfolio } from '../context/PortfolioContext';
 
 export const Navbar: React.FC = () => {
-  const { data, isAdmin, openAdminModal, logoutAdmin } = usePortfolio();
+  const { isAdmin, openAdminModal, logoutAdmin } = usePortfolio();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-
-  const planningVisible = data.settings?.planningVisible ?? false;
 
   const navItems = [
     { id: 'home', label: 'HOME' },
     { id: 'about', label: 'ABOUT' },
     { id: 'featured', label: 'FEATURED' },
     { id: 'youtube', label: 'YOUTUBE' },
-    ...(planningVisible ? [{ id: 'planning', label: 'PLANNING' }] : []),
     { id: 'contact', label: 'CONTACT' },
   ];
 
@@ -42,7 +39,7 @@ export const Navbar: React.FC = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [planningVisible]);
+  }, []);
 
   const scrollTo = (id: string) => {
     setMobileMenuOpen(false);

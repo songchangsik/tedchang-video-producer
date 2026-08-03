@@ -5,7 +5,6 @@ import { usePortfolio } from '../context/PortfolioContext';
 export const Contact: React.FC = () => {
   const { data } = usePortfolio();
   const { contact } = data;
-  const planningVisible = data.settings?.planningVisible ?? false;
 
   const [copiedEmail, setCopiedEmail] = useState(false);
 
@@ -23,7 +22,7 @@ export const Contact: React.FC = () => {
         <div className="flex items-center gap-2 mb-3">
           <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse" />
           <span className="text-xs font-mono font-bold uppercase tracking-widest text-blue-400">
-            SECTION {planningVisible ? '07' : '06'} / CONTACT & RESUME
+            SECTION 06 / CONTACT & RESUME
           </span>
         </div>
 

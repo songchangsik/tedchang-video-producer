@@ -111,9 +111,6 @@ export interface ContactData {
 }
 
 export interface PortfolioData {
-  settings: {
-    planningVisible: boolean;
-  };
   hero: HeroData;
   about: AboutData;
   skills: {

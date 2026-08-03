@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { PortfolioData } from '../types';
 import { INITIAL_PORTFOLIO_DATA } from '../data/initialData';
 
-const STORAGE_KEY = 'tedchang_pd_portfolio_data_v3';
+const STORAGE_KEY = 'tedchang_pd_portfolio_data_v4';
 const ADMIN_SESSION_KEY = 'tedchang_pd_admin_logged_in';
 const DB_NAME = 'TedChangPortfolioDB';
 const STORE_NAME = 'portfolio_store';
@@ -115,10 +115,6 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ chi
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        parsed.settings = {
-          ...INITIAL_PORTFOLIO_DATA.settings,
-          ...(parsed.settings || {}),
-        };
         if (!parsed.hero?.videoBackgroundUrl || parsed.hero.videoBackgroundUrl.trim() === '') {
           parsed.hero = { ...parsed.hero, videoBackgroundUrl: '/assets/intro.mp4' };
         }
@@ -155,10 +151,6 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     let isMounted = true;
     loadPersistedData().then((saved) => {
       if (isMounted && saved) {
-        saved.settings = {
-          ...INITIAL_PORTFOLIO_DATA.settings,
-          ...(saved.settings || {}),
-        };
         if (!saved.hero?.videoBackgroundUrl || saved.hero.videoBackgroundUrl.trim() === '') {
           saved.hero = { ...saved.hero, videoBackgroundUrl: '/assets/intro.mp4' };
         }

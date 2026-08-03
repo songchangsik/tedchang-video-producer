@@ -21,7 +21,7 @@ export const Planning: React.FC = () => {
         <div className="flex items-center gap-2 mb-3">
           <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse" />
           <span className="text-xs font-mono font-bold uppercase tracking-widest text-blue-400">
-            SECTION 06 / CREATIVE PLANNING STRATEGY
+            SECTION 07 / CREATIVE PLANNING STRATEGY
           </span>
         </div>
 

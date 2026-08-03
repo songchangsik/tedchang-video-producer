@@ -1297,39 +1297,6 @@ export const AdminModal: React.FC = () => {
                 {/* 6. Planning Tab Editor */}
                 {activeTab === 'planning' && (
                   <div className="space-y-6">
-                    <div className="p-4 sm:p-5 bg-blue-50 border border-blue-200 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                      <div>
-                        <h3 className="text-sm font-black text-zinc-900">기획안 섹션 표시</h3>
-                        <p className="text-[11px] text-zinc-500 mt-1">OFF로 바꿔도 기획안 내용과 링크는 삭제되지 않고, 공개 포트폴리오에서만 숨겨집니다.</p>
-                      </div>
-                      <button
-                        type="button"
-                        role="switch"
-                        aria-checked={data.settings?.planningVisible ?? false}
-                        onClick={() => {
-                          updateData((prev) => ({
-                            ...prev,
-                            settings: {
-                              ...prev.settings,
-                              planningVisible: !(prev.settings?.planningVisible ?? false),
-                            },
-                          }));
-                        }}
-                        className={`relative inline-flex h-8 w-16 flex-shrink-0 items-center rounded-full border transition-colors ${
-                          (data.settings?.planningVisible ?? false)
-                            ? 'bg-blue-600 border-blue-600'
-                            : 'bg-zinc-200 border-zinc-300'
-                        }`}
-                      >
-                        <span
-                          className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
-                            (data.settings?.planningVisible ?? false) ? 'translate-x-9' : 'translate-x-1'
-                          }`}
-                        />
-                        <span className="sr-only">기획안 섹션 표시 전환</span>
-                      </button>
-                    </div>
-
                     <div className="flex items-center justify-between border-b pb-3">
                       <div>
                         <h3 className="text-lg font-black text-zinc-900">기획안 문서 (Planning Documents) 편집</h3>

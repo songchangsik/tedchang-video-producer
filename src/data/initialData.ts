@@ -6,7 +6,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
     "role": "PD",
     "subRoles": "브랜드 콘텐츠 · 예능형 연출 · 유튜브",
     "slogan": "끝까지 보는 데는 이유가 있죠",
-    "videoBackgroundUrl": "/assets/intro.mp4",
+    "videoBackgroundUrl": "/intro.mp4",
     "stat1Value": "3년",
     "stat1Label": "개인 유튜브 운영",
     "stat2Value": "100+",
@@ -20,7 +20,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       "개인 유튜브를 3년간 직접 운영하며, 아이디어를 실제 콘텐츠로 끝까지 완성해왔습니다",
       "브랜드 콘텐츠와 개인 채널을 모두 경험하며, 목적에 맞게 톤을 조절해왔습니다"
     ],
-    "profileImageUrl": "/assets/portfolio-data/profile.jpg",
+    "profileImageUrl": "/assets/media/01_item_about_profileImageUrl.jpg",
     "strengths": [
       {
         "title": "아이디어 구체화",
@@ -78,7 +78,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       "title": "파리바게뜨 몽골 진출 ",
       "category": "Global Branding",
       "client": "Paris Baguette UK",
-      "thumbnailUrl": "/assets/portfolio-data/featured-1.png",
+      "thumbnailUrl": "/assets/media/02_item_featuredWorks_0_thumbnailUrl.png",
       "videoUrl": "https://youtu.be/fAD0QHQkoQ8?si=UmM_tDNpcc9DyoUu",
       "planningIntent": "몽골 현지 학생 / '몽골에서 만나는 한국'이라는 예상 밖의 소재를 통해 시청자의 궁금증을 자극하고, 파리바게뜨 브랜드를 콘텐츠에 자연스럽게 녹여냈습니다",
       "role": "메인 PD (기획 80%, 편집 100%, 썸네일 100%)",
@@ -100,7 +100,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       "title": "텍사스 파리바게뜨 공장 2027년 착공 홍보",
       "category": "Web Entertainment",
       "client": "Baskin Robbins Korea",
-      "thumbnailUrl": "/assets/portfolio-data/featured-2.png",
+      "thumbnailUrl": "/assets/media/03_item_featuredWorks_1_thumbnailUrl.png",
       "videoUrl": "https://youtu.be/ZUrWfZ07bro?si=__jd_uD1v6--UBaU",
       "planningIntent": "미국 빵집과는 다른 파리바게뜨만의 매력을 보여주고 싶었습니다. 다양한 빵과 편하게 머물 수 있는 매장 분위기를 자연스럽게 담아 브랜드의 장점을 전달하는 데 집중했습니다.",
       "role": "메인 PD (기획 80%, 편집 100%, 썸네일 100%)",
@@ -121,7 +121,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       "title": "광화문 상미당, 80년 만에 파리바게뜨로 재오픈",
       "category": "Branded Content",
       "client": "Dunkin Donuts",
-      "thumbnailUrl": "/assets/portfolio-data/featured-3.png",
+      "thumbnailUrl": "/assets/media/04_item_featuredWorks_2_thumbnailUrl.png",
       "videoUrl": "https://youtu.be/LTHEIKElau0?si=zq1wAcx1tEdaAS12",
       "planningIntent": "젠슨 황의 한국 방문 당시 화제가 된 치맥 에피소드로 시청자의 관심을 먼저 끌고, 이후 광화문 파리바게뜨를 디저트 코스로 자연스럽게 연결했습니다.",
       "role": "메인 PD (기획 100%, 촬영 60%, 편집 100%, 썸네일 100%)",
@@ -140,7 +140,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       "title": "SPC 가평휴게소 콘텐츠",
       "category": "Premium Cinematic",
       "client": "Fashion5",
-      "thumbnailUrl": "/assets/portfolio-data/featured-4.png",
+      "thumbnailUrl": "/assets/media/05_item_featuredWorks_3_thumbnailUrl.png",
       "videoUrl": "https://youtu.be/_pco1MF9zMA?si=RFReW7_OMzSRly0i",
       "planningIntent": "SPC가 운영하는 가평휴게소에서만 만날 수 있는 한정 메뉴를 중심으로, 브랜드의 차별점을 자연스럽게 콘텐츠에 담았습니다.",
       "role": "메인 PD (기획 100%, 촬영 50%, 편집 100%, 썸네일 100%)",
@@ -159,7 +159,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       "title": "케이팝 데몬 헌터스 × 파리바게뜨 협업 콘텐츠",
       "category": "Commercial Shorts",
       "client": "City Deli",
-      "thumbnailUrl": "/assets/portfolio-data/featured-5.png",
+      "thumbnailUrl": "/assets/media/06_item_featuredWorks_4_thumbnailUrl.png",
       "videoUrl": "https://youtu.be/c2vE-pWkCFE?si=VtpczKVqS3yPHc7w",
       "planningIntent": "화제성이 높은 케이팝 데몬 헌터스 IP를 활용해 시청자의 관심을 끌고, 파리바게뜨 협업 제품을 자연스럽게 소개하는 콘텐츠를 기획했습니다.",
       "role": "메인 PD (기획 30%, 편집 100%, 썸네일 100%)",
@@ -178,7 +178,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       "title": "SPC 브랜드 크리스마스 한정상품 소개",
       "category": "Personal Project",
       "client": "TEDCHANGG (개인 채널)",
-      "thumbnailUrl": "/assets/portfolio-data/featured-6.png",
+      "thumbnailUrl": "/assets/media/07_item_featuredWorks_5_thumbnailUrl.png",
       "videoUrl": "https://youtu.be/zpzLuHSvwww?si=FGBUpl6cOUpkZQbs",
       "planningIntent": "크리스마스 홈파티 분위기를 연출해 SPC 브랜드의 시즌 한정상품을 자연스럽게 소개하는 콘텐츠를 기획했습니다.",
       "role": "메인 PD (기획 60%, 촬영 70%, 편집 100%, 썸네일 90%)",
@@ -201,7 +201,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       {
         "id": "yt-1",
         "title": "이번 여행에서 이게 정말 필요한걸까",
-        "thumbnailUrl": "/assets/portfolio-data/youtube-1.jpg",
+        "thumbnailUrl": "/assets/media/08_item_personalYoutube_items_0_thumbnailUrl.jpg",
         "videoUrl": "https://youtu.be/l6X5vK2Une4",
         "views": "128만 회",
         "isBest": true,
@@ -213,7 +213,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       {
         "id": "yt-2",
         "title": " 말 못 하는 게 이렇게 고된 거였니",
-        "thumbnailUrl": "/assets/portfolio-data/youtube-2.jpg",
+        "thumbnailUrl": "/assets/media/09_item_personalYoutube_items_1_thumbnailUrl.jpg",
         "videoUrl": "https://youtu.be/zHRL92OPt0c?si=AnNRu4C8ICBJyP9K",
         "views": "85만 회",
         "isBest": true,
@@ -225,7 +225,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       {
         "id": "yt-3",
         "title": " 노스탤지어도 모르는 놈한테는 장가 안가",
-        "thumbnailUrl": "/assets/portfolio-data/youtube-3.jpg",
+        "thumbnailUrl": "/assets/media/10_item_personalYoutube_items_2_thumbnailUrl.jpg",
         "videoUrl": "https://youtu.be/OD9mzEWRxNY?si=bdqpobgu7dywHPPO",
         "views": "64만 회",
         "isBest": true,
@@ -237,7 +237,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       {
         "id": "yt-4",
         "title": " 넌 웃는모습이 제일 예뻐",
-        "thumbnailUrl": "/assets/portfolio-data/youtube-4.jpg",
+        "thumbnailUrl": "/assets/media/11_item_personalYoutube_items_3_thumbnailUrl.jpg",
         "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
         "views": "42만 회",
         "isBest": false,
@@ -249,7 +249,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       {
         "id": "yt-5",
         "title": " 여기 꽃이 있는데 꽃보러 어딜 간다는거야",
-        "thumbnailUrl": "/assets/portfolio-data/youtube-5.jpg",
+        "thumbnailUrl": "/assets/media/12_item_personalYoutube_items_4_thumbnailUrl.jpg",
         "videoUrl": "https://youtu.be/VFhaAQKjmWc?si=uktls0f6XuePSzRZ",
         "views": "31만 회",
         "isBest": false,
@@ -261,7 +261,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       {
         "id": "yt-6",
         "title": " 너네 솔직히 초면 아니지, 나 몰래 만나고 있었던 거지",
-        "thumbnailUrl": "/assets/portfolio-data/youtube-6.webp",
+        "thumbnailUrl": "/assets/media/13_item_personalYoutube_items_5_thumbnailUrl.webp",
         "videoUrl": "https://youtu.be/CPB0UOsBBs4?si=apIF4ZdKGeSnq1kY",
         "views": "29만 회",
         "isBest": false,
@@ -273,7 +273,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       {
         "id": "yt-7",
         "title": " 청춘 페스티벌 가는 청춘 호소인 둘",
-        "thumbnailUrl": "/assets/portfolio-data/youtube-7.jpg",
+        "thumbnailUrl": "/assets/media/14_item_personalYoutube_items_6_thumbnailUrl.jpg",
         "videoUrl": "https://youtu.be/mYLZj-ec4wc?si=E-DLt0xTTceee5SX",
         "views": "53만 회",
         "isBest": true,
@@ -285,7 +285,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       {
         "id": "yt-8",
         "title": " 나이 한 살 더 먹은 소감이 어떠세요",
-        "thumbnailUrl": "/assets/portfolio-data/youtube-8.jpg",
+        "thumbnailUrl": "/assets/media/15_item_personalYoutube_items_7_thumbnailUrl.jpg",
         "videoUrl": "https://youtu.be/BbWzX4jHavs?si=FeHv4ImpAstXM2gc",
         "views": "38만 회",
         "isBest": false,
@@ -297,7 +297,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       {
         "id": "yt-9",
         "title": " 수원은 뭐하고 놀아야 되니",
-        "thumbnailUrl": "/assets/portfolio-data/youtube-9.jpg",
+        "thumbnailUrl": "/assets/media/16_item_personalYoutube_items_8_thumbnailUrl.jpg",
         "videoUrl": "https://youtu.be/zb4XEfhz4fU?si=jM9AUWpQFwxz1tzo",
         "views": "45만 회",
         "isBest": false,
@@ -309,7 +309,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       {
         "id": "yt-10",
         "title": " 네 명 다 좀 시끄럽긴 한데, 심성은",
-        "thumbnailUrl": "/assets/portfolio-data/youtube-10.jpg",
+        "thumbnailUrl": "/assets/media/17_item_personalYoutube_items_9_thumbnailUrl.jpg",
         "videoUrl": "https://youtu.be/XYIE12x81yU?si=mu0TY_yuQ8UO9bDY",
         "views": "61만 회",
         "isBest": false,
@@ -321,7 +321,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       {
         "id": "yt-11",
         "title": " 우리끼리 강릉도 와보고 오래 살고 볼일이다 애들아",
-        "thumbnailUrl": "/assets/portfolio-data/youtube-11.jpg",
+        "thumbnailUrl": "/assets/media/18_item_personalYoutube_items_10_thumbnailUrl.jpg",
         "videoUrl": "https://youtu.be/ySrr9gdc1tY?si=8jeKX16rOZyVv-gF",
         "views": "77만 회",
         "isBest": false,
@@ -333,7 +333,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       {
         "id": "yt-12",
         "title": " 당신과 함께하는 드라이브는 어디든 즐거워",
-        "thumbnailUrl": "/assets/portfolio-data/youtube-12.jpg",
+        "thumbnailUrl": "/assets/media/19_item_personalYoutube_items_11_thumbnailUrl.jpg",
         "videoUrl": "https://youtu.be/6objFybqse0?si=5gUngyNUf7MUAoAG",
         "views": "50만 회",
         "isBest": false,
@@ -616,8 +616,5 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
     "instagramUrl": "https://instagram.com/changchanghanna1",
     "resumePdfUrl": "https://drive.google.com/drive/folders/13zqqX_SIEQD-LJp1C-fIwHI0fLvsq2Fu?usp=sharing",
     "portfolioPdfUrl": "#"
-  },
-  "settings": {
-    "planningVisible": false
   }
 };

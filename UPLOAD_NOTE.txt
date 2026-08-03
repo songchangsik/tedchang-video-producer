@@ -1,0 +1,9 @@
+GitHub Desktop 업로드용 정리본
+
+- 붙여넣은 텍스트의 최신 포트폴리오 데이터를 src/data/initialData.ts에 반영했습니다.
+- 대용량 base64 이미지는 public/assets/media/로 분리해 실제 정적 파일로 저장했습니다.
+- 기존 브라우저 저장 데이터가 새 코드 변경사항을 덮어쓰지 않도록 저장 키를 v3 -> v4로 변경했습니다.
+- 인트로 영상 경로는 Vite public 경로인 /intro.mp4로 맞췄습니다.
+
+사용 방법:
+이 압축을 풀고 기존 GitHub Desktop 로컬 저장소에 전체 파일을 덮어쓴 뒤 Commit -> Push 하면 됩니다.

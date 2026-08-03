@@ -115,12 +115,27 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ chi
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
+        parsed.settings = {
+          ...INITIAL_PORTFOLIO_DATA.settings,
+          ...(parsed.settings || {}),
+        };
         if (!parsed.hero?.videoBackgroundUrl || parsed.hero.videoBackgroundUrl.trim() === '') {
           parsed.hero = { ...parsed.hero, videoBackgroundUrl: '/assets/intro.mp4' };
         }
         if (!parsed.personalYoutube?.description || parsed.personalYoutube.description === "독학 PD의 솔직한 영상 제작기 및 예능 실험실. 기획부터 100만 뷰 달성까지의 과정 공개") {
           parsed.personalYoutube = { ...parsed.personalYoutube, description: "기획부터 촬영, 편집까지. 혼자 만드는 예능 콘텐츠 실험실." };
         }
+        if (parsed.contact) {
+          parsed.contact = {
+            blogUrl: INITIAL_PORTFOLIO_DATA.contact.blogUrl,
+            blogLabel: INITIAL_PORTFOLIO_DATA.contact.blogLabel,
+            blogDisplayText: INITIAL_PORTFOLIO_DATA.contact.blogDisplayText,
+            youtubeHandle: INITIAL_PORTFOLIO_DATA.contact.youtubeHandle,
+            instagramHandle: INITIAL_PORTFOLIO_DATA.contact.instagramHandle,
+            ...parsed.contact,
+          };
+        }
+        parsed.skills = INITIAL_PORTFOLIO_DATA.skills;
         return parsed;
       }
     } catch (e) {
@@ -140,12 +155,27 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     let isMounted = true;
     loadPersistedData().then((saved) => {
       if (isMounted && saved) {
+        saved.settings = {
+          ...INITIAL_PORTFOLIO_DATA.settings,
+          ...(saved.settings || {}),
+        };
         if (!saved.hero?.videoBackgroundUrl || saved.hero.videoBackgroundUrl.trim() === '') {
           saved.hero = { ...saved.hero, videoBackgroundUrl: '/assets/intro.mp4' };
         }
         if (!saved.personalYoutube?.description || saved.personalYoutube.description === "독학 PD의 솔직한 영상 제작기 및 예능 실험실. 기획부터 100만 뷰 달성까지의 과정 공개") {
           saved.personalYoutube = { ...saved.personalYoutube, description: "기획부터 촬영, 편집까지. 혼자 만드는 예능 콘텐츠 실험실." };
         }
+        if (saved.contact) {
+          saved.contact = {
+            blogUrl: INITIAL_PORTFOLIO_DATA.contact.blogUrl,
+            blogLabel: INITIAL_PORTFOLIO_DATA.contact.blogLabel,
+            blogDisplayText: INITIAL_PORTFOLIO_DATA.contact.blogDisplayText,
+            youtubeHandle: INITIAL_PORTFOLIO_DATA.contact.youtubeHandle,
+            instagramHandle: INITIAL_PORTFOLIO_DATA.contact.instagramHandle,
+            ...saved.contact,
+          };
+        }
+        saved.skills = INITIAL_PORTFOLIO_DATA.skills;
         setData(saved);
       }
     });

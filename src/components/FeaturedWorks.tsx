@@ -24,10 +24,10 @@ export const FeaturedWorks: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-zinc-900 tracking-tight">
-              대표 프로젝트 (Featured Works)
+              대표 프로젝트
             </h2>
             <p className="text-zinc-500 text-sm sm:text-base mt-2">
-              기획부터 현장 연출, 컷편집, 썸네일, 실제 성과 수치까지 입증된 메인 작품집
+              광고팀에서 기획부터 촬영, 편집까지 직접 참여한 대표 작업입니다.
             </p>
           </div>
           <span className="mt-4 md:mt-0 text-xs font-bold text-blue-700 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-100">
@@ -74,8 +74,8 @@ export const FeaturedWorks: React.FC = () => {
 
                   {/* Result */}
                   <div>
-                    <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-0.5">Result</p>
-                    <p className="text-xs text-zinc-900 font-semibold line-clamp-1">{work.performance}</p>
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-0.5">Result</p>
+                    <p className="text-xs text-blue-600 font-semibold line-clamp-1">{work.performance}</p>
                   </div>
                 </div>
 

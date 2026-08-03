@@ -5,6 +5,7 @@ import { usePortfolio } from '../context/PortfolioContext';
 export const Contact: React.FC = () => {
   const { data } = usePortfolio();
   const { contact } = data;
+  const planningVisible = data.settings?.planningVisible ?? false;
 
   const [copiedEmail, setCopiedEmail] = useState(false);
 
@@ -22,7 +23,7 @@ export const Contact: React.FC = () => {
         <div className="flex items-center gap-2 mb-3">
           <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse" />
           <span className="text-xs font-mono font-bold uppercase tracking-widest text-blue-400">
-            SECTION 06 / CONTACT & RESUME
+            SECTION {planningVisible ? '07' : '06'} / CONTACT & RESUME
           </span>
         </div>
 
@@ -44,14 +45,9 @@ export const Contact: React.FC = () => {
                 DIRECT EMAIL CONTACT
               </span>
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 bg-blue-500/10 text-blue-400 rounded-xl border border-blue-500/20">
-                    <Mail className="w-5 h-5" />
-                  </div>
-                  <span className="text-sm sm:text-base font-extrabold text-white font-mono tracking-tight">
-                    {contact.email}
-                  </span>
-                </div>
+                <span className="text-sm sm:text-base font-extrabold text-white font-mono tracking-tight">
+                  {contact.email}
+                </span>
                 <button
                   onClick={copyEmailToClipboard}
                   className="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl text-xs font-extrabold transition flex items-center gap-2"
@@ -70,43 +66,52 @@ export const Contact: React.FC = () => {
             </div>
 
             {/* Social Links */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <a
                 href={contact.youtubeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-5 bg-zinc-900 hover:bg-zinc-850 rounded-2xl border border-zinc-800 hover:border-red-500/60 transition flex items-center justify-between group"
+                className="p-5 bg-zinc-900 hover:bg-zinc-850 rounded-2xl border border-zinc-800 hover:border-blue-500/50 transition-colors flex flex-col justify-between gap-3 group"
               >
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 bg-red-600 text-white rounded-xl">
-                    <Youtube className="w-5 h-5 fill-white" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-zinc-400">YOUTUBE</p>
-                    <p className="text-sm sm:text-base font-extrabold text-white font-mono tracking-tight">tedchangg</p>
-                  </div>
+                <div className="flex items-center justify-between w-full">
+                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider group-hover:text-blue-400 transition-colors">YOUTUBE</span>
+                  <ArrowUpRight className="w-4 h-4 text-zinc-400 group-hover:text-blue-400 transition-colors" />
                 </div>
-                <ArrowUpRight className="w-4 h-4 text-zinc-400 group-hover:text-red-500 transition" />
+                <p className="text-sm sm:text-base font-extrabold text-white font-mono tracking-tight truncate">
+                  {contact.youtubeHandle || 'tedchangg'}
+                </p>
               </a>
 
               <a
                 href={contact.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-5 bg-zinc-900 hover:bg-zinc-850 rounded-2xl border border-zinc-800 hover:border-pink-500/60 transition flex items-center justify-between group"
+                className="p-5 bg-zinc-900 hover:bg-zinc-850 rounded-2xl border border-zinc-800 hover:border-blue-500/50 transition-colors flex flex-col justify-between gap-3 group"
               >
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white rounded-xl">
-                    <Instagram className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-zinc-400">INSTAGRAM</p>
-                    <p className="text-sm sm:text-base font-extrabold text-white font-mono tracking-tight">
-                      @changchanghanna1
-                    </p>
-                  </div>
+                <div className="flex items-center justify-between w-full">
+                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider group-hover:text-blue-400 transition-colors">INSTAGRAM</span>
+                  <ArrowUpRight className="w-4 h-4 text-zinc-400 group-hover:text-blue-400 transition-colors" />
                 </div>
-                <ArrowUpRight className="w-4 h-4 text-zinc-400 group-hover:text-pink-500 transition" />
+                <p className="text-sm sm:text-base font-extrabold text-white font-mono tracking-tight truncate">
+                  {contact.instagramHandle || '@changchanghanna1'}
+                </p>
+              </a>
+
+              <a
+                href={contact.blogUrl || 'https://blog.naver.com'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-5 bg-zinc-900 hover:bg-zinc-850 rounded-2xl border border-zinc-800 hover:border-blue-500/50 transition-colors flex flex-col justify-between gap-3 group"
+              >
+                <div className="flex items-center justify-between w-full">
+                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider group-hover:text-blue-400 transition-colors">
+                    {contact.blogLabel || 'BLOG'}
+                  </span>
+                  <ArrowUpRight className="w-4 h-4 text-zinc-400 group-hover:text-blue-400 transition-colors" />
+                </div>
+                <p className="text-sm sm:text-base font-extrabold text-white font-mono tracking-tight truncate">
+                  {contact.blogDisplayText || '블로그'}
+                </p>
               </a>
             </div>
 

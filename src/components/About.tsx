@@ -11,14 +11,14 @@ export const About: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Tag */}
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center gap-2 mb-0 relative top-[24px]">
           <span className="w-2.5 h-2.5 rounded-full bg-blue-500" />
           <span className="text-xs font-black uppercase tracking-widest text-zinc-500">
             SECTION 02 / ABOUT ME
           </span>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center lg:items-end">
           
           {/* Left Text Column */}
           <div className="lg:col-span-7 space-y-6">

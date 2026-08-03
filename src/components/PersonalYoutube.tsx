@@ -36,7 +36,7 @@ export const PersonalYoutube: React.FC = () => {
         <div className="flex items-center gap-2 mb-3">
           <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse" />
           <span className="text-xs font-mono font-bold uppercase tracking-widest text-zinc-400">
-            SECTION 05 / PERSONAL PROJECT
+            SECTION 05 / PERSONAL CHANNEL
           </span>
         </div>
 

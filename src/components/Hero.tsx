@@ -70,13 +70,13 @@ export const Hero: React.FC = () => {
                 </span>
               </div>
 
-              <p className="text-lg sm:text-xl font-extrabold text-blue-400 tracking-wide">
+              <p className="text-[12px] sm:text-[14px] font-extrabold text-blue-400 tracking-wide">
                 {hero.subRoles}
               </p>
 
               <div className="space-y-1 sm:space-y-1.5">
                 <p className="text-xl sm:text-2xl md:text-3xl font-extrabold text-zinc-100 leading-snug">
-                  "{hero.slogan}"
+                  {hero.slogan}
                 </p>
 
                 <p className="text-[15px] sm:text-[16px] font-normal text-white/75 leading-[1.5]">
@@ -129,10 +129,10 @@ export const Hero: React.FC = () => {
             {/* 4 Key Skill Area Badges */}
             <div className="col-span-2 lg:col-span-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
               {[
-                { title: 'Planning', desc: '스토리 기획 & 대본' },
-                { title: 'Shooting', desc: '라이팅 & 연출' },
-                { title: 'Editing', desc: '컷편집 & 효과' },
-                { title: 'Thumbnail', desc: '고CTR 디자인' },
+                { title: 'Story', desc: '다음 장면이 궁금한 흐름' },
+                { title: 'Brand', desc: '브랜드답게, 콘텐츠답게' },
+                { title: 'Direction', desc: '현장 변수까지 살리는 연출' },
+                { title: 'Production', desc: '기획부터 썸네일까지 직접' },
               ].map((item, index) => (
                 <div
                   key={index}

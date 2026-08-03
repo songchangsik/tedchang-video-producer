@@ -100,12 +100,20 @@ export interface AboutData {
 export interface ContactData {
   email: string;
   youtubeUrl: string;
+  youtubeHandle?: string;
   instagramUrl: string;
+  instagramHandle?: string;
+  blogUrl?: string;
+  blogLabel?: string;
+  blogDisplayText?: string;
   resumePdfUrl: string;
   portfolioPdfUrl: string;
 }
 
 export interface PortfolioData {
+  settings: {
+    planningVisible: boolean;
+  };
   hero: HeroData;
   about: AboutData;
   skills: {

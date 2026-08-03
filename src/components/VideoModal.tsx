@@ -244,22 +244,6 @@ export const VideoModal: React.FC<VideoModalProps> = ({
             )}
           </div>
 
-          {/* Storyboard or Behind Images */}
-          {storyboardImages && storyboardImages.length > 0 && (
-            <div className="space-y-3 pt-4 border-t border-zinc-100">
-              <h3 className="text-sm font-bold text-zinc-900">스토리보드 & 기획 비하인드</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {storyboardImages.map((img, idx) => (
-                  <img
-                    key={idx}
-                    src={img || undefined}
-                    alt={`Storyboard ${idx + 1}`}
-                    className="w-full h-48 object-cover rounded-2xl border border-zinc-200"
-                  />
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>

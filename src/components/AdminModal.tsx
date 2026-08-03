@@ -1297,6 +1297,39 @@ export const AdminModal: React.FC = () => {
                 {/* 6. Planning Tab Editor */}
                 {activeTab === 'planning' && (
                   <div className="space-y-6">
+                    <div className="p-4 sm:p-5 bg-blue-50 border border-blue-200 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                      <div>
+                        <h3 className="text-sm font-black text-zinc-900">기획안 섹션 표시</h3>
+                        <p className="text-[11px] text-zinc-500 mt-1">OFF로 바꿔도 기획안 내용과 링크는 삭제되지 않고, 공개 포트폴리오에서만 숨겨집니다.</p>
+                      </div>
+                      <button
+                        type="button"
+                        role="switch"
+                        aria-checked={data.settings?.planningVisible ?? false}
+                        onClick={() => {
+                          updateData((prev) => ({
+                            ...prev,
+                            settings: {
+                              ...prev.settings,
+                              planningVisible: !(prev.settings?.planningVisible ?? false),
+                            },
+                          }));
+                        }}
+                        className={`relative inline-flex h-8 w-16 flex-shrink-0 items-center rounded-full border transition-colors ${
+                          (data.settings?.planningVisible ?? false)
+                            ? 'bg-blue-600 border-blue-600'
+                            : 'bg-zinc-200 border-zinc-300'
+                        }`}
+                      >
+                        <span
+                          className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
+                            (data.settings?.planningVisible ?? false) ? 'translate-x-9' : 'translate-x-1'
+                          }`}
+                        />
+                        <span className="sr-only">기획안 섹션 표시 전환</span>
+                      </button>
+                    </div>
+
                     <div className="flex items-center justify-between border-b pb-3">
                       <div>
                         <h3 className="text-lg font-black text-zinc-900">기획안 문서 (Planning Documents) 편집</h3>
@@ -1479,7 +1512,7 @@ export const AdminModal: React.FC = () => {
                       </div>
 
                       <div>
-                        <label className="text-xs font-bold text-zinc-700 block mb-1">인스타그램 링크 또는 아이디</label>
+                        <label className="text-xs font-bold text-zinc-700 block mb-1">인스타그램 링크</label>
                         <input
                           type="text"
                           value={data.contact.instagramUrl}
@@ -1496,6 +1529,23 @@ export const AdminModal: React.FC = () => {
                       </div>
 
                       <div>
+                        <label className="text-xs font-bold text-zinc-700 block mb-1">인스타그램 계정 표기 (Handle)</label>
+                        <input
+                          type="text"
+                          value={data.contact.instagramHandle || ''}
+                          onChange={(e) => {
+                            const val = e.target.value;
+                            updateData((prev) => ({
+                              ...prev,
+                              contact: { ...prev.contact, instagramHandle: val }
+                            }));
+                          }}
+                          className="w-full p-2.5 bg-zinc-50 border border-zinc-200 rounded-xl text-xs font-bold"
+                          placeholder="@changchanghanna1"
+                        />
+                      </div>
+
+                      <div>
                         <label className="text-xs font-bold text-zinc-700 block mb-1">유튜브 채널 링크</label>
                         <input
                           type="text"
@@ -1508,6 +1558,74 @@ export const AdminModal: React.FC = () => {
                             }));
                           }}
                           className="w-full p-2.5 bg-zinc-50 border border-zinc-200 rounded-xl text-xs"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="text-xs font-bold text-zinc-700 block mb-1">유튜브 채널 표기 (Handle)</label>
+                        <input
+                          type="text"
+                          value={data.contact.youtubeHandle || ''}
+                          onChange={(e) => {
+                            const val = e.target.value;
+                            updateData((prev) => ({
+                              ...prev,
+                              contact: { ...prev.contact, youtubeHandle: val }
+                            }));
+                          }}
+                          className="w-full p-2.5 bg-zinc-50 border border-zinc-200 rounded-xl text-xs font-bold"
+                          placeholder="tedchangg"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="text-xs font-bold text-zinc-700 block mb-1">블로그 링크 (Blog URL)</label>
+                        <input
+                          type="text"
+                          value={data.contact.blogUrl || ''}
+                          onChange={(e) => {
+                            const val = e.target.value;
+                            updateData((prev) => ({
+                              ...prev,
+                              contact: { ...prev.contact, blogUrl: val }
+                            }));
+                          }}
+                          className="w-full p-2.5 bg-zinc-50 border border-zinc-200 rounded-xl text-xs"
+                          placeholder="https://blog.naver.com"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="text-xs font-bold text-zinc-700 block mb-1">블로그 라벨 (Blog Label)</label>
+                        <input
+                          type="text"
+                          value={data.contact.blogLabel || ''}
+                          onChange={(e) => {
+                            const val = e.target.value;
+                            updateData((prev) => ({
+                              ...prev,
+                              contact: { ...prev.contact, blogLabel: val }
+                            }));
+                          }}
+                          className="w-full p-2.5 bg-zinc-50 border border-zinc-200 rounded-xl text-xs"
+                          placeholder="BLOG"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="text-xs font-bold text-zinc-700 block mb-1">블로그 표시 텍스트 (Blog Display Text)</label>
+                        <input
+                          type="text"
+                          value={data.contact.blogDisplayText || ''}
+                          onChange={(e) => {
+                            const val = e.target.value;
+                            updateData((prev) => ({
+                              ...prev,
+                              contact: { ...prev.contact, blogDisplayText: val }
+                            }));
+                          }}
+                          className="w-full p-2.5 bg-zinc-50 border border-zinc-200 rounded-xl text-xs"
+                          placeholder="블로그"
                         />
                       </div>
 

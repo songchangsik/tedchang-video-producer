@@ -30,10 +30,10 @@ export const Skills: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
             <h2 className="text-3xl sm:text-4xl font-black text-zinc-900 tracking-tight">
-              전문 제작 툴 & 핵심 역량
+              제작 툴 & 실무 역량
             </h2>
             <p className="text-zinc-500 text-sm mt-2">
-              최상의 완성도와 스피디한 작업 속도를 보장하는 PD 워크플로우 소프트웨어
+              편집부터 그래픽, 모션, AI까지 콘텐츠 제작에 필요한 툴을 활용합니다.
             </p>
           </div>
         </div>
@@ -59,10 +59,10 @@ export const Skills: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <span className="text-xs font-mono font-bold text-blue-400 uppercase tracking-wider block mb-1">
-                CORE COMPETENCIES
+                PRODUCTION SCOPE
               </span>
               <h3 className="text-xl sm:text-2xl font-black text-white">
-                영상 제작 프로세스 6단계 완벽 커버
+                기획부터 썸네일까지, 롱폼과 숏폼 모두 다룹니다.
               </h3>
             </div>
 
